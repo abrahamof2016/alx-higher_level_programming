@@ -1,3 +1,3 @@
-#!/home/vagrant/Python-3.8.5/python
+#!/usr/bin/python3
 number = 98
 print('Float: {:.2f}'.format(number))
