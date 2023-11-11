@@ -9,10 +9,10 @@ if number < 0:
     elif last < 0:
         print(f"Last digit of {number} is {last} and is less than 6 and not 0")
 elif number >= 0:
-    last_dig = number % 10
-    if (last_dig == 0):
-        print(f"Last digit of {number} is {last_dig} and is 0")
-    elif (last_dig < 6 and last_dig > 0):
-        print(f"Last digit of {number} is {last_dig} and is less than 6 and not 0")
-    elif (last_dig > 5):
-        print(f"Last digit of {number} is {last_dig} and is greater than 5")
+    lad = number % 10
+    if (lad == 0):
+        print(f"Last digit of {number} is {lad} and is 0")
+    elif (lad < 6 and last_dig > 0):
+        print("Last digit of {number} is {lad} and is less than 6 and not 0")
+    elif (lad > 5):
+        print(f"Last digit of {number} is {lad} and is greater than 5")
