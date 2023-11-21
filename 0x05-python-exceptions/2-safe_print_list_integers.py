@@ -6,7 +6,7 @@ def safe_print_list_integers(my_list=[], x=0):
             break
         try:
             print("{:d}".format(i), end="")
-            printed_char+=1
+            printed_char += 1
         except Exception:
             pass
     print()
