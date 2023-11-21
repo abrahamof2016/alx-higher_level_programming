@@ -7,6 +7,9 @@ def safe_print_list_integers(my_list=[], x=0):
         try:
             print("{:d}".format(i), end="")
             printed_char += 1
+        except IndexError:
+            print("list index out of range")
+            break
         except Exception:
             pass
     print()
