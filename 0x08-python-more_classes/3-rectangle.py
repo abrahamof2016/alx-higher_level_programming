@@ -12,6 +12,7 @@ class Rectangle:
         __init__: Initializes attributes
         area: returns rectangle area
         perimeter: returns perimeter of rectangle
+        __str__: prints rectangle
     """
 
     def __init__(self, width=0, height=0):
@@ -91,9 +92,9 @@ class Rectangle:
         """
         prints rectangle with character #
         """
+        rectangle = ""
         if self.__width == 0 or self.__height == 0:
             return rectangle
-        rectangle = ""
         for i in range(self.__height - 1):
             rectangle += "#" * self.__width + "\n"
         rectangle += "#" * self.__width
