@@ -99,8 +99,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return rectangle
         for i in range(self.__height - 1):
-            rectangle += Rectangle.print_symbol * self.__width + "\n"
-        rectangle += Rectangle.print_symbol * self.__width
+            rectangle += str(self.print_symbol) * self.__width + "\n"
+        rectangle += str(self.print_symbol) * self.__width
         return rectangle
 
     def __repr__(self):
