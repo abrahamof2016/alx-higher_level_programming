@@ -8,11 +8,7 @@ This module has one function, add_integer(a, b=98)
 
 def add_integer(a, b=98):
     """
-    Returns a + b, an exact integer
-    parameters:
-    a = an integer
-    b = an integer
-
+    returns the sum of a and b
     """
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
