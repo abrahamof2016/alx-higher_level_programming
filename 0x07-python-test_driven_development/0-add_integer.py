@@ -8,7 +8,7 @@ The module function is add_integer(a, b=98)
 
 def add_integer(a, b=98):
     """
-    returns the sum of a and b
+    adds two integers
     """
     if type(a) not in [int, float] or type(a) is None:
         raise TypeError("a must be an integer")
