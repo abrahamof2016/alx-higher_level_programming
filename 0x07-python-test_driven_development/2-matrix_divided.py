@@ -11,9 +11,10 @@ def matrix_divided(matrix, div):
     return:
         a new matrix
     """
-
-    if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix of integers/floats")
+    if not all(isinstance(item, list) for item in matrix):
+        raise TypeError(
+                "matrix must be a matrix(list of list)of integers/floats"
+                )
     if len(matrix[0]) != len(matrix[1]):
         raise TypeError("Each row of the matrix must have the same size")
     if not isinstance(div, (float, int)):
