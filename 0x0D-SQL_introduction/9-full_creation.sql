@@ -9,5 +9,4 @@ VALUES
 (1, "John", 10),
 (2, "ALEX", 3),
 (3, "Bob", 14),
-(4, "George", 8)
-;
+(4, "George", 8);
