@@ -5,3 +5,4 @@ CREATE TABLE first_table(
     id INTEGER,
     name VARCHAR(256)
 );
+
