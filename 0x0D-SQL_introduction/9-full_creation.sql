@@ -1,9 +1,9 @@
 -- A script that creates a table second_table.
 CREATE TABLE IF NOT EXISTS second_table(
-    id INT,
+    id INTEGER,
     name VARCHAR(256),
-    score INT);
-INSERT INTO second_table
+    score INTEGER);
+INSERT INTO second_table (id, name, score)
 VALUES
 (1, "John", 10),
 (2, "ALEX", 3),
