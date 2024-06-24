@@ -19,3 +19,11 @@ Traceback (most recent call last):
   File "/home/vagrant/alx-higher_level_programming/0x07-python-test_driven_development/add_integer.py", line 18, in add_integer
     raise TypeError("a must be an integer")
 TypeError: a must be an integer
+>>> print(add_integer(2,NaN))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'NaN' is not defined
+>>> print(add_integer(NaN,2))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'NaN' is not defined
