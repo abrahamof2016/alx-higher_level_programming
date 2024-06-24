@@ -27,3 +27,15 @@ NameError: name 'NaN' is not defined
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 NameError: name 'NaN' is not defined
+>>> print(add_integer(2, float(NaN)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'NaN' is not defined
+>>> print(add_integer(2, float(nan)))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nan' is not defined
+>>> print(add_integer(float(nan), 2))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nan' is not defined
