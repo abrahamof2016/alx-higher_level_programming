@@ -2,7 +2,6 @@
 """
 This is module for integer addition
 This module has one function
-The module function is add_integer(a, b=98)
 """
 
 
