@@ -1,0 +1,32 @@
+>>> print_square = __import__('4-print_square').print_square
+
+positive integer
+
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+Test with size equal to 0
+
+>>> print_square(0)
+
+Test with a floating-point number size
+
+>>> print_square(3.5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/alx-higher_level_programming/0x07-python-test_driven_development/a.py", line 15, in print_square
+    raise TypeError(
+TypeError: size must be an integer
+
+Test with negative size
+
+>>> print_square(-2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/vagrant/alx-higher_level_programming/0x07-python-test_driven_development/a.py", line 19, in print_square
+    raise ValueError(
+ValueError: size must be >= 0
