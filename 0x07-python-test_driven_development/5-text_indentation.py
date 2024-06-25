@@ -17,5 +17,5 @@ def text_indentation(text):
         raise EOFError('you must enter text to use the function')
     for ch in ['.', '?', ':']:
         if ch in text:
-            text = text.replace(ch, '\n\n')
+            text = text.replace(ch, '\n\n\n')
     print(text)
