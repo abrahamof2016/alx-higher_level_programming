@@ -1,45 +1,46 @@
-This is a doctest for matrix_division
-
-It is supposed to divide all the elements of a matrix
-
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
-check for correct input
->>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+check division by nothing.
+
+>>> print(matrix_divided([ [1, 2, 3], [4, 5, 6] ]))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+check division of two equal row matrix
+
+>>> print(matrix_divided([ [1, 2, 3], [4, 5, 6] ], 3))
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
->>> matrix_divided([[1, 2, 3], [0, 0, 0]], 3)
-[[0.33, 0.67, 1.0], [0.0, 0.0, 0.0]]
+check division of empty matrix
 
->>> matrix_divided([[3], [0]], 3)
-[[1.0], [0.0]]
+>>> print(matrix_divided([ [], [] ], 3))
+[[], []]
 
->>> matrix_divided([[3, 9], [12, 15]], 3)
-[[1.0, 3.0], [4.0, 5.0]]
+what if list of lists are charater
 
-check for wrong matrix arg
->>> matrix_divided([[1, 2, 3], [4, 5]], 3)
+>>> print(matrix_divided([ ['a', 'b'], ['c', 'd'] ], 3))
 Traceback (most recent call last):
-    ...
+  File "<stdin>", line 1, in <module>
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+what if None element of list of lists exist
+
+>>> print(matrix_divided([ [1, None], [3, 4] ], 3))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+check division of unequal matrix row
+
+>>> print(matrix_divided([ [1], [1, 2] ], 2))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
 TypeError: Each row of the matrix must have the same size
 
->>> matrix_divided([[1, 2], [3, 4, 5]], 3)
-Traceback (most recent call last):
-    ...
-TypeError: Each row of the matrix must have the same size
+check division by zero
 
-check for wrong second arg
->>> matrix_divided([[1, 2, 3], [4, 5, 6]], '3')
+>>> print(matrix_divided([ [1, 2], [3, 4] ], 0))
 Traceback (most recent call last):
-    ...
-TypeError: div must be a number
-
->>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
-Traceback (most recent call last):
-    ...
-ZeroDivisionError: division by zero
-
->>> matrix_divided([[3, 9], [12, 15]], 0)
-Traceback (most recent call last):
-    ...
+  File "<stdin>", line 1, in <module>
 ZeroDivisionError: division by zero
