@@ -3,6 +3,7 @@
 module for matrix division.
 """
 
+
 def matrix_divided(matrix, div):
     """
     function for matrix division.
@@ -14,13 +15,14 @@ def matrix_divided(matrix, div):
     """
     if not all(isinstance(row, list) for row in matrix):
         raise TypeError(
-        'matrix must be a matrix (list of lists) of integers/floats'
-        )
+                'matrix must be a matrix (list of lists) of integers/floats'
+                )
     for lst in matrix:
         for num in lst:
             if type(num) not in [int, float] or num is None:
                 raise TypeError(
-                        'matrix must be a matrix (list of lists) of integers/floats'
+                        'matrix must be a matrix'
+                        '(list of lists) of integers/floats'
                         )
     """
     check if row's are equal in size.
@@ -31,7 +33,6 @@ def matrix_divided(matrix, div):
             raise TypeError(
                     'Each row of the matrix must have the same size'
                     )
-        
     """
     checking div.
     """
