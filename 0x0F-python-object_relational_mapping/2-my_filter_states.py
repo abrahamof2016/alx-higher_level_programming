@@ -20,6 +20,7 @@ if __name__ == '__main__':
                     WHERE name LIKE '{:s}'\
                     ORDER BY id ASC;".format(argv[4]))
     for row in mycursor.fetchall():
-        print(row)
+        if row[1] == argv[4]:
+            print(row)
     mycursor.close()
     db.close()
