@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """"
 lists all script from a database hbtn_0e_0_usa
 """
