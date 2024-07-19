@@ -19,8 +19,13 @@ if __name__ == '__main__':
                     INNER JOIN states\
                     ON cities.state_id = states.id\
                     WHERE states.name = %s", [argv[4]])
-    for row in mycursor.fetchall():
-        print(row[0], end=", ")
-    print()
+    row_list = mycursor.fetchall()
+    printed_row = 0
+    for row in row_list:
+        if printed_row < len(row_list) - 1:
+            print("{}, ".format(row[0]), end="")
+            printed_row += 1
+        else:
+            print("{}".format(row[0]))
     mycursor.close()
     db.close()
