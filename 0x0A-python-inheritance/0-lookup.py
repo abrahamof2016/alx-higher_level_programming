@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""
-python module.
-contains one function.
-"""
+""" module contains: lookup """
+
+
 def lookup(obj):
     """
-    a function.
-    arg:
-        obj: an object.
-    return:
-        returns a list of available attributes and methods of an object.
+        returns the list of available attributes
+        and methods of obj
+        Args:
+            obj: object whose attributes and methods
+                 are to be listed
+        Return:
+            list of attributes and methods of obj
     """
-    return(dir(obj))
+    return dir(obj)
